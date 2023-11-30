@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Marcellus&family=Meddon&family=Poppins:wght@200;300;400;600;700;800;900&display=swap');
+
+/* font-family: 'Jost', sans-serif;
+font-family: 'Marcellus', serif;
+font-family: 'Meddon', cursive;
+font-family: 'Poppins', sans-serif; */
+
+:root{
+    --primary-color: #d39c60;
+    --secondary-color: #220801;
+    --text-color: #fff;
+
+    --nav-li-hover-color: rgb(5, 151, 151);
+
+    --button-padding: 0.7rem 2rem;
+    --button-bg-color: rgb(236, 34, 68);
+    --button-border-radius: 0.3rem;
+
+    --font-family-serif: 'Marcellus', serif;
+    --font-family-cursive: 'Meddon', cursive;
+    --font-famity-poppin: 'Poppins', sans-serif;
+
+    --box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.774);
+
+    --about-text-color: rgb(6, 82, 82);;
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+::selection{
+    background-color: var(--button-bg-color);
+    color: #fff;
+}
+
+body{
+    font-family: var(--font-famity-poppin);
+    font-size: 1rem;
+    overflow-x: hidden;
+}
+
+/* ========== NAVBAR START =========== */
+nav .hotel-title{
+    font-size: 1.5rem;
+}
+
+nav .hotel-title:hover{
+    text-decoration: none;
+}
+
+nav ul li{
+    transition: color 0.15s;
+}
+
+nav ul li:hover{
+    color: var(--nav-li-hover-color);
+}
+
+nav form .btn, #about button, footer .footer-button{
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    transition: all 0.15s;
+}
+
+nav form .btn:hover, #about button:hover, footer .footer-button:hover{
+    transform: scale(0.95);
+    color: var(--text-color);
+}
+
+.carousel-caption{
+    width: 50%;
+}
+
+.hotel-hero-tagline{
+    width: 100%;
+    font-size: 3rem;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hotel-hero-tagline span{
+    color: var(--button-bg-color);
+}
+
+.layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.9));
+}
+/* ========== NAVBAR END =========== */
+
+/* =========== HERO SECTION START ========== */
+.carousel-caption{
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -60%);
+}
+
+.carousel-item img{
+    height: 38rem;
+    object-fit: cover;
+    object-position: top;
+    filter: blur(2px);
+}
+/* =========== HERO SECTION END ========== */
+
+/* ============ ABOUT SECTION START ============= */
+#about .about-img{
+    max-width: 25rem;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+#about .about-img img{
+    width: 100%;
+    height: 100%;
+}
+
+#about .about-short-tag{
+    width: 220px;
+    padding: 1rem 1.5rem;
+    line-height: 0.2rem;
+    font-size: 0.8rem;
+    background-color: white;
+    position: absolute;
+    top: 35%;
+    left: -3%;
+    box-shadow: -0.2rem 0.2rem 0.9rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+#about .about-short-tag h4{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#about .about-short-tag .about-review{
+    margin-top: 0.9rem;
+}
+
+#about .about-short-tag .about-review span{
+    margin-left: 1.5rem;
+    color: rgb(206, 206, 2);
+}
+
+#about .about-right-text h2{
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+#about .about-right-text p, #services p, #reviews p{
+    font-size: 1rem;
+}
+
+#about .about-right-text button{
+    font-size: 1rem;
+}
+/* ============ ABOUT SECTION END ============= */
+
+/* ============ ROOMS SECTION START ============= */
+#about .about-right-text .about-title, #rooms .rooms-title, #services h5, #reviews h5{
+    position: relative;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+#about .about-right-text .about-title::after, #rooms .rooms-title::after, #services h5::after, #reviews h5::after{
+    position: absolute;
+    content: "";
+    width: 10%;
+    height: 1px;
+    background-color: var(--about-text-color);
+    top: 50%;
+    margin-left: 5px;
+}
+
+#rooms h2, #services h2{
+    font-weight: 600;
+}
+
+#rooms .card{
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+#rooms .card-title{
+    font-weight: 600;
+}
+
+#rooms .card-body hr{
+    width: 100px;
+    background-color: var(--about-text-color);
+    height: 0.5px;
+}
+
+#rooms .card .card-body h3{
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+#rooms .card .card-body h3 span{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+#rooms .room-btn{
+    border: 1px solid var(--button-bg-color);
+    color: var(--button-bg-color);
+    transition: all 0.15s;
+    font-size: 1rem;
+}
+
+#rooms .room-btn:hover{
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    transform: scale(0.95);
+}
+
+#rooms .middle-card{
+    background-color: rgba(0, 255, 255, 0.288);
+}
+
+#rooms .room-btn-main{
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.15s;
+}
+
+#rooms .room-btn-main:hover{
+    transform: scale(0.95);
+}
+/* ============ ROOMS SECTION END ============= */
+
+/* ============ SERVICES SECTION START ============= */
+#services .img{
+    max-width: 25rem;
+    margin-left: auto;
+}
+
+#services .img img{
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+}
+
+#services .blob{
+    max-width: 20rem;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%) rotate(-50deg);
+    z-index: -9;
+}
+
+#services .blob img{
+    width: 100%;
+    height: 100%;
+}
+
+#services .services-lists{
+    margin-top: 1.5rem;
+}
+
+#services .services-lists .icon{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+#services .services-lists .icon i{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* ============ SERVICES SECTION END ============= */
+
+/* ============ REVIEWS SECTION START ============= */
+#reviews i{
+    font-size: 4rem;
+    color: aqua;
+}
+
+#reviews .right-img{
+    border-radius: 0.5rem;
+}
+
+#reviews p{
+    font-style: italic;
+}
+
+#reviews .cus-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#reviews .cus-pic img{
+    width: 100%;
+    height: 100%;
+}
+
+#reviews .cus-info{
+    line-height: 5px;
+    margin-top: 1rem;
+}
+
+#reviews .cus-info h4{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#reviews .cus-info p{
+    font-size: 0.8rem;
+}
+/* ============ REVIEWS SECTION END ============= */
+
+/* ============ FOOTER SECTION START ============= */
+footer h5{
+    margin-bottom: 2rem;
+}
+
+footer address{
+    line-height: 8px;
+    padding-top: 10px;
+    color: rgb(1, 230, 230);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+footer ul li a{
+    color: rgb(1, 230, 230);
+    font-size: 0.9rem;
+}
+
+footer ul li a:hover{
+    color: rgb(0, 131, 131);
+}
+
+footer .footer-button{
+    font-size: 0.8rem;
+}
+
+footer .contact-mail{
+    color: rgb(1, 230, 230);
+    margin-bottom: 1rem;
+}
+
+footer .social a{
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+footer .social a i{
+    color: rgb(1, 230, 230);
+    font-size: 1.2rem;
+    transition: all 0.15s;
+}
+
+footer .social a i:hover{
+    color: rgb(0, 131, 131);
+}
+
+footer .last-footer{
+    font-size: 0.8rem;
+    color: #ffffff56;
+}
+/* ============ FOOTER SECTION END ============= */
+
+/* ========== MEDIA QUERY ============= */
+
+/* -------- HERO TAGLINE ---------- */
+@media (max-width: 770px) {
+    .hotel-hero-tagline{
+        font-size: 1.5rem;
+    }
+    footer address{
+        line-height: normal;
+    }
+}
